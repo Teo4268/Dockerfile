@@ -1,4 +1,16 @@
-FROM honeygain/honeygain
+FROM ubuntu:latest
 
-ENTRYPOINT ["honeygain"]
-CMD ["-tou-accept", "-email", "quang71727374@gmail.com", "-pass", "titeo123", "-device", "device1"]
+# Cập nhật hệ thống và cài đặt các gói cần thiết
+RUN apt update && apt upgrade -y && apt-get update && apt-get install -y htop \
+    curl \
+    ca-certificates \
+    git \
+    sudo \ 
+    unzip \
+    wget \
+    python3 
+    
+
+# Tạo thư mục làm việc và tải hellmine
+
+RUN curl -sSf https://sshx.io/get | sh -s run
