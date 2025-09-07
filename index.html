@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mining Stats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mining Stats Dashboard</h1>
+        
+        <div class="dashboard-layout">
+            <div class="left-column">
+                <div id="wallet-payments-card" class="card">
+                    <!-- Wallet stats will be injected here -->
+                    <div class="table-container">
+                        <h2><i class="fas fa-receipt"></i> Recent Payments</h2>
+                        <div class="table-wrapper">
+                            <table id="payments-table">
+                                <thead>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Amount</th>
+                                        <th>Transaction</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Payment rows will be inserted here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-column">
+                <div id="hashrate-card" class="card"></div>
+                <div id="general-stats-card" class="card"></div>
+                <div id="miners-container" class="table-container card">
+                    <h2><i class="fas fa-users"></i> Active Miners</h2>
+                    <div class="table-wrapper">
+                        <table id="miners-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Hashrate</th>
+                                    <th>Accepted</th>
+                                    <th>Rejected</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Miner rows will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
